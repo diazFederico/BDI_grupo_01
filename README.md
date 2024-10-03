@@ -5,6 +5,8 @@ Este trabajo práctico se centra en el desarrollo de un modelo de diagrama relac
 
 El objetivo es abordar el problema de la fragmentación de la información en el ámbito de la salud, que puede dificultar el seguimiento de la atención médica. A través de un diseño relacional claro y eficiente, se busca facilitar el acceso y la actualización de datos clínicos, permitiendo así una atención más coordinada y segura.
 
+[imagen](./assets/diagrama.png)
+
 ## Entidades principales:
 
 1. **Paciente**: Información sobre los pacientes.
