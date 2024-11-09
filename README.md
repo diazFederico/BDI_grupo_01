@@ -1,9 +1,10 @@
 # Diagrama Relacional - Gestor de Historias Clínicas, Medicaciones y Pacientes Internados
 
 # Descripción del Trabajo Práctico
-Este trabajo práctico se centra en el desarrollo de un modelo de diagrama relacional destinado a optimizar la gestión de información médica relacionada con pacientes internados. Se investigará la estructura y las relaciones entre las entidades clave que componen el sistema: Pacientes, Historias Clínicas, Internaciones, Médicos, Medicaciones y Tratamientos.
+Este trabajo práctico se centra en el desarrollo de un modelo de diagrama relacional (y su posterior base de datos) con el objetivo de optimizar la gestión de información médica relacionada con pacientes internados.
+Se investigará la estructura y las relaciones entre las entidades clave que componen el sistema: Pacientes, Historias Clínicas, Internaciones, Médicos, Medicaciones y Tratamientos para un buen planteamiento de la base. Y su relacion con el tema asignado: *triggers*
 
-El objetivo es abordar el problema de la fragmentación de la información en el ámbito de la salud, que puede dificultar el seguimiento de la atención médica. A través de un diseño relacional claro y eficiente, se busca facilitar el acceso y la actualización de datos clínicos, permitiendo así una atención más coordinada y segura.
+El objetivo a mayor escala es abordar el problema de la fragmentación de la información en el ámbito de la salud, que puede dificultar el seguimiento de la atención médica.
 
 ![imagen de la bd](./assets/diagrama.png)
 
