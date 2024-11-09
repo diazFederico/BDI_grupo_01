@@ -6,7 +6,7 @@ Se investigará la estructura y las relaciones entre las entidades clave que com
 
 El objetivo a mayor escala es abordar el problema de la fragmentación de la información en el ámbito de la salud, que puede dificultar el seguimiento de la atención médica.
 
-![imagen de la bd](./assets/diagrama.png)
+![imagen de la bd](./assets/diagrama2.png)
 
 ## Entidades principales:
 
