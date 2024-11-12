@@ -1,4 +1,8 @@
 # 6. Bibliografía
+La bibliografía usada para el desarrollo de este trabajo se lista de manera no exhaustiva aquí abajo:
+
+- 
+
 
 <table>
   <tr>
