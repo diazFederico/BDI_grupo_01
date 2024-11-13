@@ -1,5 +1,5 @@
 
---- Trigger para marcar automáticamente el final de un tratamiento
+--- Permite marcar automáticamente el final de un tratamiento
 CREATE TRIGGER actualizar_historia_clinica_tratamiento_finalizado
 AFTER UPDATE ON tratamiento
 FOR EACH ROW
@@ -11,7 +11,7 @@ BEGIN
 END;
 
 
---- Verificar que la fecha de finalización de tratamiento no sea anterior a la de inicio
+--- Verifica que la fecha de finalización de tratamiento no sea anterior a la de inicio
 CREATE TRIGGER validar_fecha_tratamiento
 BEFORE INSERT ON tratamiento
 FOR EACH ROW
@@ -23,7 +23,7 @@ BEGIN
 END;
 
 
---- Evitar medicación duplicada para un mismo paciente
+--- Evita medicación duplicada para un mismo paciente
 CREATE TRIGGER evitar_medicacion_duplicada
 BEFORE INSERT ON tratamiento
 FOR EACH ROW
@@ -40,7 +40,7 @@ BEGIN
 END;
 
 
---- Evitar que un paciente tenga más de una internación activa a la vez
+--- Evita que un paciente tenga más de una internación activa a la vez
 CREATE TRIGGER evitar_internacion_duplicada
 BEFORE INSERT ON internacion
 FOR EACH ROW
@@ -57,7 +57,7 @@ BEGIN
 END;
 
 
---- Validar la edad del paciente al ingresar un nuevo registro
+--- Valida la edad del paciente al ingresar un nuevo registro
 CREATE TRIGGER verificar_edad_paciente
 BEFORE INSERT ON paciente
 FOR EACH ROW
@@ -69,3 +69,4 @@ BEGIN
     SET MESSAGE_TEXT = 'El paciente es menor de edad.';
   END IF;
 END;
+
