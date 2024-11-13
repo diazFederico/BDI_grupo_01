@@ -1,7 +1,6 @@
 # 2. Marco conceptual 📝
 
-## Conceptos clave en un marco conceptual sobre triggers en SQL:
-1. **Trigger (Desencadenador)**:
+1. **¿Que es un Trigger (Desencadenador)?**:
 
 Es un objeto asociado a una tabla en una base de datos que se activa automáticamente en respuesta a un evento específico, como la inserción, actualización o eliminación de registros.
 
