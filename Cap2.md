@@ -15,7 +15,7 @@ Un marco conceptual sobre triggers en SQL implica establecer una comprensión te
 - DELETE: Un trigger se activa cuando se elimina una fila de la tabla.
 Estos eventos permiten que las bases de datos reacciones a las modificaciones de manera dinámica, como la validación de datos, auditoría o actualización de registros relacionados.
 
-3. Operación de un trigger:
+3. **Operación de un trigger**:
 
 - Los triggers son definidos para ejecutarse de forma automática, sin intervención externa, lo que implica que el código que se ejecuta dentro de un trigger no es invocado explícitamente por el usuario.
 
