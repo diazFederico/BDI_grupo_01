@@ -110,7 +110,7 @@ CREATE TABLE medico
 
 CREATE TABLE historia_clinica
 (
-  id_historia INT NOT NULL,
+  id_historia INT IDENTITY(1,1) NOT NULL,
   observaciones VARCHAR(100) NOT NULL,
   id_paciente NUMERIC(15) NOT NULL,
   id_medico INT NOT NULL,
