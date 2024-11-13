@@ -50,3 +50,39 @@ BEGIN
     VALUES (@id_paciente, @nombre, @apellido, @fecha_nacimiento, @action, GETDATE());
 END;
 
+-- Para probar:
+-- Insertar un nuevo paciente
+--INSERT INTO paciente (id_paciente, nombre, fecha_nacimiento, genero, direccion, telefono, email, apellido, activo)
+--VALUES (123456, 'Juan', '1985-05-15', 'M', 'Calle Ficticia 123', 123456789012, 'juan@email.com', 'Pérez', 1);
+-- Eliminar un paciente por su id
+--DELETE FROM paciente
+--WHERE id_paciente = 123456;
+-- Modificar los datos de un paciente existente
+--UPDATE paciente
+--SET nombre = 'Juan Carlos', direccion = 'Calle Ficticia 456', telefono = 987654321012, email = 'juancarlos@email.com', activo = 1
+--WHERE id_paciente = 123456;
+
+-- Guardar en medicacion_anterior los distintos cambios (eliminaciones) de las medicaciones actuales
+CREATE TRIGGER trg_guardar_medicacion_eliminada
+ON medicacion_actual
+FOR DELETE
+AS
+BEGIN
+    -- Variables para almacenar los valores de los registros eliminados
+    DECLARE @dosis VARCHAR(35)
+    DECLARE @frecuencia VARCHAR(35)
+    DECLARE @id_tratamiento INT
+    DECLARE @id_medicamento INT
+
+    -- Insertar los registros eliminados en medicacion_anterior
+    INSERT INTO medicacion_anterior (dosis, frecuencia, id_tratamiento, id_medicamento)
+    SELECT dosis, frecuencia, id_tratamiento, id_medicamento
+    FROM deleted
+END;
+
+-- Para probar:
+-- Eliminar el registro con id_tratamiento = 2 de medicacion_actual
+-- DELETE FROM medicacion_actual
+-- WHERE id_tratamiento = 2;
+
+
