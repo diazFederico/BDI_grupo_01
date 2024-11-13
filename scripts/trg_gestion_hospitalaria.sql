@@ -86,3 +86,23 @@ END;
 -- WHERE id_tratamiento = 2;
 
 
+--EVITAR QUE LA FECHA DE EGRESO SEA MENOR A LA FECHA DE INGRESO
+CREATE TRIGGER trg_check_fecha_egreso
+ON internacion
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    DECLARE @fecha_ingreso DATE, @fecha_egreso DATE;
+    
+    -- Obtener los valores de fecha_ingreso y fecha_egreso de las filas afectadas
+    SELECT @fecha_ingreso = fecha_ingreso, @fecha_egreso = fecha_egreso
+    FROM inserted;
+    
+    -- Verificar la condición
+    IF @fecha_egreso < @fecha_ingreso
+    BEGIN
+        RAISERROR('La fecha de egreso no puede ser anterior a la fecha de ingreso.', 16, 1);
+        ROLLBACK TRANSACTION;
+    END
+END;
+
