@@ -18,8 +18,9 @@ acuerdo para realizar el trabajo.
 Fuentes bibliográficas y técnicas: Mayormente el método que utilizamos para recabar información fue internet para entender las 
 especificaciones técnicas y la funcionalidad de los triggers.
 
-**Herramientas de Implementación y Pruebas:**
-Lenguajes y Scripts SQL: El código SQL fue el lenguaje para la creación y prueba de triggers.
+**Implementación y Pruebas:**
+
+**Lenguajes y Scripts SQL:** El código SQL fue el lenguaje para la creación y prueba de triggers.
 
 
 Durante el proceso algunas de **las dificultades encontradas** incluyeron en:
