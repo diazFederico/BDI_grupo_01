@@ -25,7 +25,7 @@ CREATE TABLE paciente
   telefono NUMERIC(16) NOT NULL,
   email VARCHAR(100) NOT NULL,
   apellido CHAR(30) NOT NULL,
-  activo BOOLEAN NOT NULL,
+  activo BIT NOT NULL,
   CONSTRAINT PK_id_paciente PRIMARY KEY (id_paciente)
 );
 
