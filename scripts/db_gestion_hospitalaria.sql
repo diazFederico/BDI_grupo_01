@@ -46,8 +46,8 @@ CREATE TABLE diagnosticos
 CREATE TABLE vademecum
 (
   id_medicamento INT NOT NULL,
-  nombre_comercial VARCHAR(100) NOT NULL,
-  principio_activo VARCHAR(100) NOT NULL,
+  nombre_comercial VARCHAR(MAX) NOT NULL,
+  principio_activo VARCHAR(MAX) NOT NULL,
   CONSTRAINT PK_id_medicamento PRIMARY KEY (id_medicamento)
 );
 
