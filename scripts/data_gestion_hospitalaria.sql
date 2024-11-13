@@ -302,3 +302,258 @@ VALUES
 (100000000000048, 'José', '1983-09-15', 'M', 'Avenida Central 4444, Ciudad', 555890123456, 'jose.martin@email.com', 'Martín', 1),
 (100000000000049, 'Gabriela', '1994-03-11', 'F', 'Calle de la Luna 4545, Ciudad', 555901234567, 'gabriela.palacios@email.com', 'Palacios', 1),
 (100000000000050, 'Javier', '1991-01-09', 'M', 'Avenida Esperanza 4646, Ciudad', 555012345678, 'javier.vargas@email.com', 'Vargas', 1);
+
+INSERT INTO historia_clinica (observaciones, id_paciente, id_medico, id_diagnostico)
+VALUES
+('Paciente con hipertensión controlada mediante fármacos. Se recomienda continuar con monitoreo periódico.', 100000000000001, 101, 1),
+('Paciente con diabetes tipo 1. Se encuentra en seguimiento endocrinológico para ajuste de insulina.', 100000000000002, 102, 2),
+('Diagnóstico de insuficiencia renal aguda. Se inicia tratamiento con diálisis y se monitoriza función renal.', 100000000000003, 103, 3),
+('Paciente con diagnóstico reciente de cáncer de páncreas. En espera de tratamiento de quimioterapia.', 100000000000004, 104, 4),
+('Enfermedad pulmonar obstructiva crónica (EPOC) en estadio 2. Tratamiento con broncodilatadores y oxígeno.', 100000000000005, 105, 5),
+('Paciente con infección respiratoria grave. Recibe tratamiento antibiótico y seguimiento estrecho.', 100000000000006, 106, 6),
+('Paciente con antecedentes de infarto miocárdico. Se ajusta tratamiento anticoagulante y seguimiento cardiológico.', 100000000000007, 107, 7),
+('Artritis reumatoide en fase activa. Inicia tratamiento con metotrexato y seguimiento en reumatología.', 100000000000008, 108, 8),
+('Síndrome de apnea del sueño. Se recomienda el uso de CPAP para mejorar la calidad del sueño.', 100000000000009, 109, 9),
+('Paciente con esclerosis múltiple en etapa inicial. Se ajusta tratamiento inmunomodulador.', 100000000000010, 110, 10),
+('Enfermedad de Crohn diagnosticada. Inicia tratamiento con antiinflamatorios y seguimiento digestivo.', 100000000000011, 111, 11),
+('Cáncer de mama. Se ha programado cirugía para mastectomía parcial y tratamiento postoperatorio con quimioterapia.', 100000000000012, 112, 12),
+('Paciente con úlcera péptica. Se ajusta tratamiento con inhibidores de la bomba de protones y antibióticos.', 100000000000013, 113, 13),
+('Pacienta con trastorno bipolar. Tratamiento estabilizador del ánimo y seguimiento psiquiátrico.', 100000000000014, 114, 14),
+('Diagnóstico de depresión mayor. Tratamiento farmacológico con antidepresivos y psicoterapia.', 100000000000015, 115, 15),
+('Paciente con migrañas frecuentes. Se inicia tratamiento preventivo y manejo del dolor agudo.', 100000000000016, 116, 16),
+('Paciente con insuficiencia hepática crónica. En evaluación para trasplante hepático.', 100000000000017, 117, 17),
+('Fibromialgia diagnosticada. Se recomienda ejercicio físico moderado y terapia de manejo del dolor.', 100000000000018, 118, 18),
+('Síndrome de Guillain-Barré. El paciente se encuentra en recuperación tras tratamiento inmunoglobulínico.', 100000000000019, 119, 19),
+('Cálculos renales. Se recomienda aumento en la ingesta de líquidos y seguimiento para litotricia.', 100000000000020, 120, 20),
+('Paciente con espondilitis anquilosante. En tratamiento con antiinflamatorios no esteroides y fisioterapia.', 100000000000021, 121, 21),
+('Cáncer de colon en estadio 2. Se ha realizado resección quirúrgica del tumor y el paciente recibe seguimiento oncológico.', 100000000000022, 122, 22),
+('Paciente con asma persistente. Requiere tratamiento con broncodilatadores y corticoides inhalados.', 100000000000023, 123, 23),
+('Paciente con hipertensión pulmonar. En tratamiento con vasodilatadores pulmonares.', 100000000000024, 124, 24),
+('Trastorno de ansiedad generalizada. Tratamiento con ansiolíticos y seguimiento psicológico.', 100000000000025, 125, 25),
+('Reflujo gastroesofágico crónico. Tratamiento con inhibidores de la bomba de protones y cambios en la dieta.', 100000000000026, 126, 26),
+('Paciente con anorexia nerviosa grave. En tratamiento hospitalario con nutrición asistida y psicoterapia.', 100000000000027, 127, 27),
+('Pacienta con trastorno obsesivo-compulsivo. Tratamiento con inhibidores selectivos de la recaptación de serotonina y terapia cognitivo-conductual.', 100000000000028, 128, 28),
+('Enfermedad celíaca diagnosticada. Se instruye sobre dieta sin gluten estricta.', 100000000000029, 129, 29),
+('Pacientes con tendinitis en hombro. Requiere terapia física y antiinflamatorios.', 100000000000030, 130, 30),
+('Paciente con herpes zóster. Se prescriben antivirales y analgésicos para controlar el dolor.', 100000000000031, 131, 31),
+('Paciente con fractura de fémur. Requiere cirugía ortopédica y rehabilitación posterior.', 100000000000032, 132, 32),
+('Paciente con insuficiencia cardíaca congestiva. Se ajusta tratamiento con diuréticos y seguimiento cardiológico.', 100000000000033, 133, 33),
+('Diagnóstico de leucemia mieloide crónica. Inicia tratamiento con inhibidores de tirosina quinasa.', 100000000000034, 134, 34),
+('Paciente con cirugía de apendicitis exitosa. En seguimiento postquirúrgico y control de la recuperación.', 100000000000035, 135, 35),
+('Cáncer de próstata diagnosticado. En espera de tratamiento con radioterapia.', 100000000000036, 136, 36),
+('Paciente con pancreatitis aguda. Se recomienda reposo digestivo y tratamiento con líquidos intravenosos.', 100000000000037, 137, 37),
+('Paciente con síndrome de Turner. En evaluación para terapia de reemplazo hormonal.', 100000000000038, 138, 38),
+('Hipotiroidismo diagnosticado. El paciente está en tratamiento con levotiroxina y seguimiento endocrinológico.', 100000000000039, 139, 39),
+('Cáncer cervical. Se realiza cirugía de conización y tratamiento con quimioterapia.', 100000000000040, 140, 40),
+('Paciente con neumonía bacteriana. En tratamiento con antibióticos intravenosos y reposo.', 100000000000041, 141, 41),
+('Síndrome de ovario poliquístico. Se recomienda tratamiento hormonal y cambios en la dieta.', 100000000000042, 142, 42),
+('Paciente con úlcera venosa crónica. Se inicia tratamiento con apósitos y compresión.', 100000000000043, 143, 43),
+('Enfermedad de Parkinson. Tratamiento con levodopa y seguimiento neurológico.', 100000000000044, 144, 44),
+('Diagnóstico de hemorragia subaracnoidea. Requiere atención neuroquirúrgica urgente.', 100000000000045, 145, 45),
+('Paciente con lupus eritematoso sistémico. En tratamiento con inmunosupresores y seguimiento reumatológico.', 100000000000046, 146, 46),
+('Diagnóstico de sarcoidosis pulmonar. Se recomienda seguimiento pulmonológico y tratamiento antiinflamatorio.', 100000000000047, 147, 47),
+('Paciente con hepatopatía alcohólica. Se recomienda abstinencia del alcohol y seguimiento hepático.', 100000000000048, 148, 48),
+('Paciente con trombosis venosa profunda. En tratamiento anticoagulante y seguimiento en consulta de trombosis.', 100000000000049, 149, 49),
+('Paciente con úlceras gástricas recurrentes. En tratamiento con antibióticos y control del ácido gástrico.', 100000000000050, 150, 50),
+('Paciente con fibromatosis uterina. Requiere cirugía laparoscópica para la resección de los fibromas.', 100000000000051, 151, 51),
+('Cáncer de riñón diagnosticado. En espera de cirugía para resección del tumor renal.', 100000000000052, 152, 52),
+('Paciente con epilepsia refractaria. Se ajusta tratamiento con anticonvulsivos y seguimiento neurológico.', 100000000000053, 153, 53),
+('Paciente con hemofilia tipo A. Se administra factor VIII y se recomienda evitar actividades de alto riesgo.', 100000000000054, 154, 54),
+('Paciente con nefropatía diabética. En tratamiento con inhibidores de la ECA y control estricto de la glucosa.', 100000000000055, 155, 55),
+('Paciente con vitiligo. Se recomienda tratamiento tópico con esteroides y seguimiento dermatológico.', 100000000000056, 156, 56),
+('Paciente con malformación arteriovenosa cerebral. En espera de tratamiento quirúrgico.', 100000000000057, 157, 57),
+('Paciente con tuberculosis pulmonar activa. En tratamiento con esquema completo de antibióticos antituberculosos.', 100000000000058, 158, 58),
+('Síndrome de Marfan diagnosticado. Se realiza seguimiento cardiológico y ortopédico.', 100000000000059, 159, 59),
+('Enfermedad de Alzheimer. Tratamiento con inhibidores de la colinesterasa y seguimiento geriátrico.', 100000000000060, 160, 60),
+('Paciente con gota. En tratamiento con alopurinol y dieta para reducir ácido úrico.', 100000000000061, 161, 61),
+('Diagnóstico de hepatitis C crónica. En tratamiento con antivirales directos.', 100000000000062, 162, 62),
+('Paciente con esofagitis eosinofílica. Se recomienda tratamiento con inhibidores de la bomba de protones y dieta de eliminación.', 100000000000063, 163, 63),
+('Paciente con síndrome de hiperparatiroidismo primario. En evaluación para cirugía de paratiroides.', 100000000000064, 164, 64),
+('Paciente con esofagitis por reflujo gastroesofágico. Tratamiento con inhibidores de la bomba de protones y cambios en el estilo de vida.', 100000000000065, 165, 65),
+('Diagnóstico de miastenia gravis. Se recomienda tratamiento con inhibidores de la acetilcolinesterasa y terapia inmunosupresora.', 100000000000066, 166, 66),
+('Paciente con infección urinaria recurrente. En tratamiento con antibióticos y seguimiento urológico.', 100000000000067, 167, 67),
+('Paciente con hipertensión arterial secundaria. En evaluación para tratamiento quirúrgico.', 100000000000068, 168, 68),
+('Diagnóstico de amiloidosis. En tratamiento con agentes inmunosupresores.', 100000000000069, 169, 69),
+('Paciente con síndrome de Cushing. Se inicia tratamiento con fármacos y evaluación quirúrgica.', 100000000000070, 170, 70);
+
+INSERT INTO internacion (fecha_ingreso, fecha_egreso, id_paciente, id_historia)
+VALUES
+('2024-01-10', '2024-01-20', 100000000000001, 1),  -- Hipertensión arterial
+('2024-02-05', NULL, 100000000000002, 2),  -- Diabetes tipo 1
+('2024-02-15', '2024-02-25', 100000000000003, 3),  -- Insuficiencia renal aguda
+('2024-03-01', NULL, 100000000000004, 4),  -- Cáncer de páncreas
+('2024-03-10', '2024-03-20', 100000000000005, 5),  -- Enfermedad pulmonar obstructiva crónica
+('2024-04-02', NULL, 100000000000006, 6),  -- Infección respiratoria grave
+('2024-04-05', '2024-04-12', 100000000000007, 7),  -- Infarto miocárdico
+('2024-04-20', NULL, 100000000000008, 8),  -- Artritis reumatoide
+('2024-05-01', '2024-05-10', 100000000000009, 9),  -- Síndrome de apnea del sueño
+('2024-05-15', NULL, 100000000000010, 10),  -- Esclerosis múltiple
+('2024-06-01', '2024-06-12', 100000000000011, 11),  -- Enfermedad de Crohn
+('2024-06-10', NULL, 100000000000012, 12),  -- Cáncer de mama
+('2024-07-01', '2024-07-10', 100000000000013, 13),  -- Úlcera péptica
+('2024-07-05', NULL, 100000000000014, 14),  -- Trastorno bipolar
+('2024-07-12', '2024-07-22', 100000000000015, 15),  -- Depresión mayor
+('2024-07-20', NULL, 100000000000016, 16),  -- Migrañas frecuentes
+('2024-08-01', '2024-08-10', 100000000000017, 17),  -- Insuficiencia hepática crónica
+('2024-08-05', NULL, 100000000000018, 18),  -- Fibromialgia
+('2024-08-10', '2024-08-15', 100000000000019, 19),  -- Síndrome de Guillain-Barré
+('2024-08-12', NULL, 100000000000020, 20),  -- Cálculos renales
+('2024-09-01', '2024-09-12', 100000000000021, 21),  -- Espondilitis anquilosante
+('2024-09-10', NULL, 100000000000022, 22),  -- Cáncer de colon
+('2024-09-15', '2024-09-25', 100000000000023, 23),  -- Asma persistente
+('2024-09-25', NULL, 100000000000024, 24),  -- Hipertensión pulmonar
+('2024-10-01', '2024-10-10', 100000000000025, 25),  -- Trastorno de ansiedad generalizada
+('2024-10-15', NULL, 100000000000026, 26),  -- Reflujo gastroesofágico
+('2024-10-20', '2024-10-30', 100000000000027, 27),  -- Anorexia nerviosa grave
+('2024-11-01', NULL, 100000000000028, 28),  -- Trastorno obsesivo-compulsivo
+('2024-11-10', '2024-11-20', 100000000000029, 29),  -- Enfermedad celíaca
+('2024-11-05', NULL, 100000000000030, 30),  -- Tendinitis en hombro
+('2024-11-12', '2024-11-22', 100000000000031, 31),  -- Herpes zóster
+('2024-11-15', NULL, 100000000000032, 32),  -- Fractura de fémur
+('2024-11-20', '2024-11-30', 100000000000033, 33),  -- Insuficiencia cardíaca congestiva
+('2024-11-25', NULL, 100000000000034, 34),  -- Leucemia mieloide crónica
+('2024-12-01', '2024-12-05', 100000000000035, 35),  -- Apendicitis
+('2024-12-10', NULL, 100000000000036, 36),  -- Cáncer de próstata
+('2024-12-15', '2024-12-25', 100000000000037, 37),  -- Pancreatitis aguda
+('2024-12-20', NULL, 100000000000038, 38),  -- Síndrome de Turner
+('2024-12-25', '2025-01-05', 100000000000039, 39),  -- Hipotiroidismo
+('2025-01-01', NULL, 100000000000040, 40),  -- Cáncer cervical
+('2025-01-10', '2025-01-15', 100000000000041, 41),  -- Neumonía bacteriana
+('2025-01-15', NULL, 100000000000042, 42),  -- Síndrome de ovario poliquístico
+('2025-02-01', '2025-02-10', 100000000000043, 43),  -- Úlcera venosa crónica
+('2025-02-10', NULL, 100000000000044, 44),  -- Parkinson
+('2025-02-15', '2025-02-25', 100000000000045, 45),  -- Hemorragia subaracnoidea
+('2025-03-01', NULL, 100000000000046, 46),  -- Lupus eritematoso sistémico
+('2025-03-05', '2025-03-15', 100000000000047, 47),  -- Sarcoidosis pulmonar
+('2025-03-15', NULL, 100000000000048, 48),  -- Hepatopatía alcohólica
+('2025-04-01', '2025-04-10', 100000000000049, 49),  -- Trombosis venosa profunda
+('2025-04-10', NULL, 100000000000050, 50);  -- Úlceras gástricas recurrentes
+
+INSERT INTO tratamiento (observaciones, id_medico, id_internacion)
+VALUES 
+('Tratamiento para dolor abdominal', 1, 1),
+('Tratamiento para infección respiratoria', 2, 2),
+('Tratamiento post quirúrgico', 3, 3),
+('Tratamiento para fiebre y dolor', 4, 4),
+('Tratamiento para control de hipertensión', 5, 5),
+('Tratamiento para migraña', 1, 6),
+('Tratamiento para diabetes', 2, 7),
+('Tratamiento para anemia', 3, 8),
+('Tratamiento para infección urinaria', 4, 9),
+('Tratamiento para insuficiencia renal', 5, 10),
+('Tratamiento post trauma', 1, 11),
+('Tratamiento para insuficiencia cardiaca', 2, 12),
+('Tratamiento para neumonía', 3, 13),
+('Tratamiento para hipertensión pulmonar', 4, 14),
+('Tratamiento para cefalea crónica', 5, 15),
+('Tratamiento para reflujo gástrico', 1, 16),
+('Tratamiento para dermatitis alérgica', 2, 17),
+('Tratamiento para problemas articulares', 3, 18),
+('Tratamiento para resfriado común', 4, 19),
+('Tratamiento para dolor muscular', 5, 20),
+('Tratamiento para arritmias', 1, 21),
+('Tratamiento para conjuntivitis', 2, 22),
+('Tratamiento para dolores articulares', 3, 23),
+('Tratamiento para depresión', 4, 24),
+('Tratamiento para alergias respiratorias', 5, 25),
+('Tratamiento para lumbalgia', 1, 26),
+('Tratamiento para hipoglucemia', 2, 27),
+('Tratamiento para artritis', 3, 28),
+('Tratamiento para síndrome de fatiga crónica', 4, 29),
+('Tratamiento para alergias alimentarias', 5, 30),
+('Tratamiento para cáncer de piel', 1, 31),
+('Tratamiento para insuficiencia hepática', 2, 32),
+('Tratamiento para hipertensión arterial', 3, 33),
+('Tratamiento para apnea del sueño', 4, 34),
+('Tratamiento para gastritis crónica', 5, 35),
+('Tratamiento para fibromialgia', 1, 36),
+('Tratamiento para infecciones bacterianas', 2, 37),
+('Tratamiento para úlceras gástricas', 3, 38),
+('Tratamiento para infecciones virales', 4, 39),
+('Tratamiento para problemas de circulación', 5, 40);
+
+INSERT INTO medicacion_actual (dosis, fecuencia, id_tratamiento, id_medicamento)
+VALUES
+('500 mg', 'Cada 8 horas', 1, 1),
+('400 mg', 'Cada 6 horas', 2, 2),
+('500 mg', 'Cada 12 horas', 3, 3),
+('250 mg', 'Cada 8 horas', 4, 4),
+('50 mg', 'Cada 12 horas', 5, 5),
+('10 mg', 'Cada 24 horas', 6, 6),
+('500 mg', 'Cada 12 horas', 7, 7),
+('1 mg', 'Cada 24 horas', 8, 8),
+('50 mg', 'Cada 24 horas', 9, 9),
+('20 mg', 'Cada 12 horas', 10, 10),
+('500 mg', 'Cada 8 horas', 11, 1),
+('200 mg', 'Cada 6 horas', 12, 2),
+('500 mg', 'Cada 12 horas', 13, 3),
+('250 mg', 'Cada 8 horas', 14, 4),
+('50 mg', 'Cada 12 horas', 15, 5),
+('10 mg', 'Cada 24 horas', 16, 6),
+('500 mg', 'Cada 12 horas', 17, 7),
+('1 mg', 'Cada 24 horas', 18, 8),
+('50 mg', 'Cada 24 horas', 19, 9),
+('20 mg', 'Cada 12 horas', 20, 10),
+('500 mg', 'Cada 8 horas', 21, 1),
+('200 mg', 'Cada 6 horas', 22, 2),
+('500 mg', 'Cada 12 horas', 23, 3),
+('250 mg', 'Cada 8 horas', 24, 4),
+('50 mg', 'Cada 12 horas', 25, 5),
+('10 mg', 'Cada 24 horas', 26, 6),
+('500 mg', 'Cada 12 horas', 27, 7),
+('1 mg', 'Cada 24 horas', 28, 8),
+('50 mg', 'Cada 24 horas', 29, 9),
+('20 mg', 'Cada 12 horas', 30, 10),
+('500 mg', 'Cada 8 horas', 31, 1),
+('200 mg', 'Cada 6 horas', 32, 2),
+('500 mg', 'Cada 12 horas', 33, 3),
+('250 mg', 'Cada 8 horas', 34, 4),
+('50 mg', 'Cada 12 horas', 35, 5),
+('10 mg', 'Cada 24 horas', 36, 6),
+('500 mg', 'Cada 12 horas', 37, 7),
+('1 mg', 'Cada 24 horas', 38, 8),
+('50 mg', 'Cada 24 horas', 39, 9),
+('20 mg', 'Cada 12 horas', 40, 10);
+
+INSERT INTO evolucion_tratamiento (descripcion, id_internacion)
+VALUES 
+('Mejoría significativa en la respuesta al tratamiento', 1),
+('Dolor controlado, evolución favorable', 2),
+('Estabilidad en los signos vitales', 3),
+('Reducción de la fiebre, respuesta positiva al tratamiento', 4),
+('Control de la presión arterial, paciente estable', 5),
+('Alivio de los síntomas, mejora general', 6),
+('Disminución de la glucosa en sangre', 7),
+('Hemoglobina mejorada, evolución positiva', 8),
+('Infección controlada, signos de mejoría', 9),
+('Recuperación postquirúrgica exitosa', 10),
+('Continuación del tratamiento para hipertensión', 11),
+('Mejoría en la función pulmonar', 12),
+('Síntomas de neumonía controlados', 13),
+('Pérdida de peso controlada, seguimiento favorable', 14),
+('Alivio en la cefalea, tratamiento adecuado', 15),
+('Recuperación tras trauma, sin complicaciones', 16),
+('Síntomas de reflujo controlados', 17),
+('Reducción de la erupción cutánea', 18),
+('Alivio en el dolor articular', 19),
+('Síntomas respiratorios mejorados', 20),
+('Alivio del dolor muscular', 21),
+('Arritmias controladas, monitoreo constante', 22),
+('Recuperación de conjuntivitis', 23),
+('Mejoría en movilidad articular', 24),
+('Tratamiento de la depresión funcionando bien', 25),
+('Síntomas alérgicos bajo control', 26),
+('Mejoría en el dolor lumbar', 27),
+('Control de glucosa efectivo', 28),
+('Menor inflamación articular', 29),
+('Fatiga crónica mejorada con tratamiento', 30),
+('Mejoría en síntomas digestivos', 31),
+('Control de la presión intraocular', 32),
+('Tratamiento de infecciones bacterianas efectivo', 33),
+('Recuperación tras cirugía', 34),
+('Síntomas de gastritis mejorados', 35),
+('Menos dolor y rigidez en las articulaciones', 36),
+('Reducción en la frecuencia de infecciones', 37),
+('Síntomas gástricos bajo control', 38),
+('Recuperación satisfactoria tras cirugía', 39),
+('Mejoría en circulación sanguínea', 40);
