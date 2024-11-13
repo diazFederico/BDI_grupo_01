@@ -1,21 +1,28 @@
 # 6. Bibliografía 📚
 La bibliografía usada para el desarrollo de este trabajo se lista de manera no exhaustiva aquí abajo:
 
-- Microsoft. (2024). *CREATE TRIGGER (Transact-SQL)*. Microsoft. [https://learn.microsoft.com/es-es/sql/t-sql/statements/create-trigger-transact-sql?view=sql-server-ver16](https://learn.microsoft.com/es-es/sql/t-sql/statements/create-trigger-transact-sql?view=sql-server-ver16)
+1. [Microsoft. CREATE TRIGGER (Transact-SQL)](https://learn.microsoft.com/es-es/sql/t-sql/statements/create-trigger-transact-sql?view=sql-server-ver16)  
+   Recuperado el 9 de noviembre de 2024.
 
-- https://www.datacamp.com/es/tutorial/sql-triggers
+2. [DataCamp. SQL triggers](https://www.datacamp.com/es/tutorial/sql-triggers)  
+   Recuperado el 9 de noviembre de 2024.
 
-- https://josejuansanchez.org/bd/unidad-12-teoria/index.html#:~:text=Un%20trigger%20es%20un%20objeto,fila%20sobre%20la%20tabla%20asociada
+3. [Sánchez, J. J. Unidad 12: Teoría - Triggers](https://josejuansanchez.org/bd/unidad-12-teoria/index.html#:~:text=Un%20trigger%20es%20un%20objeto,fila%20sobre%20la%20tabla%20asociada)  
+   Recuperado el 11 de noviembre de 2024.
 
-- https://es.stackoverflow.com/questions/246909/crear-trigger-para-sql-server
-- https://www.youtube.com/watch?v=NBIV-y6Bvh0
-- https://www.youtube.com/watch?v=LY38BoKghao
-- https://www.tutorialesprogramacionya.com/sqlserverya/temarios/descripcion.php?cod=148&punto=&inicio=
-1. [CREATE TRIGGER (Transact-SQL)](https://learn.microsoft.com/es-es/sql/t-sql/statements/create-trigger-transact-sql?view=sql-server-ver16) - Microsoft. Recuperado el 9 de noviembre de 2024.
-2. [SQL triggers](https://www.datacamp.com/es/tutorial/sql-triggers) - DataCamp. Recuperado el 9 de noviembre de 2024.
-3. [Unidad 12: Teoría - Triggers](https://josejuansanchez.org/bd/unidad-12-teoria/index.html#:~:text=Un%20trigger%20es%20un%20objeto,fila%20sobre%20la%20tabla%20asociada) - José Juan Sánchez. Recuperado el 11 de noviembre de 2024.
+4. [Stack Overflow. Crear trigger para SQL Server](https://es.stackoverflow.com/questions/246909/crear-trigger-para-sql-server)  
+   Recuperado el 9 de noviembre de 2024.
 
-- 
+5. [YouTube. Introducción a los triggers en SQL](https://www.youtube.com/watch?v=NBIV-y6Bvh0)  
+   Recuperado el 9 de noviembre de 2024.
+
+6. [YouTube. Crear un trigger en SQL](https://www.youtube.com/watch?v=LY38BoKghao)  
+   Recuperado el 9 de noviembre de 2024.
+
+7. [Tutoriales Programación YA. Descripción de triggers en SQL Server](https://www.tutorialesprogramacionya.com/sqlserverya/temarios/descripcion.php?cod=148&punto=&inicio=)  
+   Recuperado el 9 de noviembre de 2024.
+
+
 <table>
   <tr>
     <td><a href="Cap5.md"><button style="border-radius: 7px; padding: 10px 20px;">Anterior</button></a></td>
