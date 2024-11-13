@@ -1,11 +1,11 @@
-CREATE DATABASE gestion_de_medicamentos;
+CREATE DATABASE gestion_hospitalaria;
 GO
-USE gestion_de_medicamentos;
+USE gestion_hospitalaria;
 GO
 
 CREATE TABLE paciente
 (
-  id_paciente INT NOT NULL,
+  id_paciente NUMERIC(15) NOT NULL,
   nombre CHAR(30) NOT NULL,
   fecha_nacimiento DATE NOT NULL,
   genero CHAR NOT NULL,
@@ -13,52 +13,55 @@ CREATE TABLE paciente
   telefono NUMERIC(16) NOT NULL,
   email VARCHAR(100) NOT NULL,
   apellido CHAR(30) NOT NULL,
+  activo BOOLEAN NOT NULL,
   CONSTRAINT PK_id_paciente PRIMARY KEY (id_paciente)
 );
 
-CREATE TABLE Especialidad
+CREATE TABLE especialidad
 (
   id_especialidad INT NOT NULL,
-  descripcion VARCHAR(30) NOT NULL,
+  descripcion VARCHAR(50) NOT NULL,
   CONSTRAINT PK_id_especialidad PRIMARY KEY (id_especialidad)
 );
 
-CREATE TABLE medicacion
+CREATE TABLE diagnosticos
 (
-  id_medicacion INT NOT NULL,
-  nombre_medicamento CHAR(50) NOT NULL,
+  id_diagnostico INT NOT NULL,
   descripcion VARCHAR(100) NOT NULL,
-  dosis_estandar FLOAT NOT NULL,
-  CONSTRAINT PK_id_medicacion PRIMARY KEY (id_medicacion)
+  CONSTRAINT PK_id_diagnostico PRIMARY KEY (id_diagnostico)
+);
+
+CREATE TABLE vademecum
+(
+  id_medicamento INT NOT NULL,
+  nombre_comercial VARCHAR(100) NOT NULL,
+  principio_activo VARCHAR(100) NOT NULL,
+  CONSTRAINT PK_id_medicamento PRIMARY KEY (id_medicamento)
 );
 
 CREATE TABLE medico
 (
   id_medico INT NOT NULL,
-  nombre CHAR(30) NOT NULL,
-  apellido CHAR(30) NOT NULL,
+  nombre CHAR(40) NOT NULL,
+  apellido CHAR(40) NOT NULL,
   telefono NUMERIC(15) NOT NULL,
   email VARCHAR(60) NOT NULL,
   id_especialidad INT NOT NULL,
   CONSTRAINT PK_id_medico PRIMARY KEY (id_medico),
-  CONSTRAINT FK_medico_id_especialidad FOREIGN KEY (id_especialidad) REFERENCES Especialidad(id_especialidad)
+  CONSTRAINT FK_medico_id_especialidad FOREIGN KEY (id_especialidad) REFERENCES especialidad(id_especialidad)
 );
 
-CREATE TABLE tratamiento
+CREATE TABLE historia_clinica
 (
-  id_tratamiento INT NOT NULL,
-  fecha_inicio DATE NOT NULL,
-  fecha_fin DATE,
-  dosis_recetada FLOAT NOT NULL,
-  frecuencia INT NOT NULL,
+  id_historia INT NOT NULL,
   observaciones VARCHAR(100) NOT NULL,
-  id_paciente INT NOT NULL,
-  id_medicacion INT NOT NULL,
+  id_paciente NUMERIC(15) NOT NULL,
   id_medico INT NOT NULL,
-  CONSTRAINT PK_id_tratamiento PRIMARY KEY (id_tratamiento),
-  CONSTRAINT FK_tratamiento_id_paciente FOREIGN KEY (id_paciente) REFERENCES paciente(id_paciente),
-  CONSTRAINT FK_tratamiento_id_medicacion FOREIGN KEY (id_medicacion) REFERENCES medicacion(id_medicacion),
-  CONSTRAINT FK_tratamiento_id_medico FOREIGN KEY (id_medico) REFERENCES medico(id_medico)
+  id_diagnostico INT NOT NULL,
+  CONSTRAINT PK_id_historia PRIMARY KEY (id_historia),
+  CONSTRAINT FK_historia_clinica_id_paciente FOREIGN KEY (id_paciente) REFERENCES paciente(id_paciente),
+  CONSTRAINT FK_historia_clinica_id_medico FOREIGN KEY (id_medico) REFERENCES medico(id_medico),
+  CONSTRAINT FK_historia_clinica_id_diagnostico FOREIGN KEY (id_diagnostico) REFERENCES diagnosticos(id_diagnostico)
 );
 
 CREATE TABLE internacion
@@ -66,24 +69,52 @@ CREATE TABLE internacion
   id_internacion INT NOT NULL,
   fecha_ingreso DATE NOT NULL,
   fecha_egreso DATE,
-  motivo_internacion VARCHAR(60) NOT NULL,
-  observaciones VARCHAR(100) NOT NULL,
-  id_paciente INT NOT NULL,
-  id_medico INT NOT NULL,
+  id_paciente NUMERIC(15) NOT NULL,
+  id_historia INT NOT NULL,
   CONSTRAINT PK_id_internacion PRIMARY KEY (id_internacion),
   CONSTRAINT FK_internacion_id_paciente FOREIGN KEY (id_paciente) REFERENCES paciente(id_paciente),
-  CONSTRAINT FK_internacion_id_medico FOREIGN KEY (id_medico) REFERENCES medico(id_medico)
+  CONSTRAINT FK_internacion_id_historia FOREIGN KEY (id_historia) REFERENCES historia_clinica(id_historia)
 );
 
-CREATE TABLE historia_clinica
+CREATE TABLE evolucion_tratamiento
 (
-  id_historia INT NOT NULL,
-  fecha_registro DATE NOT NULL,
-  diagnostico VARCHAR(90) NOT NULL,
+  fecha DATE NOT NULL,
+  id_evolucion INT NOT NULL,
+  descripcion VARCHAR(10000) NOT NULL,
+  id_internacion INT NOT NULL,
+  CONSTRAINT PK_id_evolucion PRIMARY KEY (id_evolucion),
+  CONSTRAINT FK_evolucion_tratamiento_id_internacion FOREIGN KEY (id_internacion) REFERENCES internacion(id_internacion)
+);
+
+CREATE TABLE tratamiento
+(
+  id_tratamiento INT NOT NULL,
   observaciones VARCHAR(100) NOT NULL,
-  id_paciente INT NOT NULL,
   id_medico INT NOT NULL,
-  CONSTRAINT PK_id_historia PRIMARY KEY (id_historia),
-  CONSTRAINT FK_historia_clinica_id_paciente FOREIGN KEY (id_paciente) REFERENCES paciente(id_paciente),
-  CONSTRAINT FK_historia_clinica_id_medico FOREIGN KEY (id_medico) REFERENCES medico(id_medico)
+  id_internacion INT NOT NULL,
+  CONSTRAINT PK_id_tratamiento PRIMARY KEY (id_tratamiento),
+  CONSTRAINT FK_tratamiento_id_medico FOREIGN KEY (id_medico) REFERENCES medico(id_medico),
+  CONSTRAINT FK_tratamiento_id_internacion FOREIGN KEY (id_internacion) REFERENCES internacion(id_internacion)
+);
+
+CREATE TABLE medicacion_anterior
+(
+  dosis VARCHAR(35) NOT NULL,
+  frecuencia VARCHAR(35) NOT NULL,
+  id_tratamiento INT NOT NULL,
+  id_medicamento INT NOT NULL,
+  CONSTRAINT PK_id_tratamiento_id_medicamento_M-ANTERIOR PRIMARY KEY (id_tratamiento, id_medicamento),
+  CONSTRAINT FK_medicacion_anterior_id_tratamiento FOREIGN KEY (id_tratamiento) REFERENCES tratamiento(id_tratamiento),
+  CONSTRAINT FK_medicacion_anterior_id_medicamento FOREIGN KEY (id_medicamento) REFERENCES vademecum(id_medicamento)
+);
+
+CREATE TABLE medicacion_actual
+(
+  dosis VARCHAR(35) NOT NULL,
+  fecuencia VARCHAR(35) NOT NULL,
+  id_tratamiento INT NOT NULL,
+  id_medicamento INT NOT NULL,
+  CONSTRAINT PK_id_tratamiento_id_medicamento_M-ACTUAL PRIMARY KEY (id_tratamiento, id_medicamento),
+  CONSTRAINT FK_medicacion_actual_id_tratamiento FOREIGN KEY (id_tratamiento) REFERENCES tratamiento(id_tratamiento),
+  CONSTRAINT FK_medicacion_actual_id_medicamento FOREIGN KEY (id_medicamento) REFERENCES vademecum(id_medicamento)
 );
