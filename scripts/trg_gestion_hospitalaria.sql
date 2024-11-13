@@ -38,3 +38,34 @@ BEGIN
     SET MESSAGE_TEXT = 'El paciente ya está recibiendo este medicamento.';
   END IF;
 END;
+
+
+--- Evitar que un paciente tenga más de una internación activa a la vez
+CREATE TRIGGER evitar_internacion_duplicada
+BEFORE INSERT ON internacion
+FOR EACH ROW
+BEGIN
+  DECLARE internaciones_activas INT;
+  SELECT COUNT(*) INTO internaciones_activas
+  FROM internacion
+  WHERE id_paciente = NEW.id_paciente AND fecha_egreso IS NULL;
+  
+  IF internaciones_activas > 0 THEN
+    SIGNAL SQLSTATE '45000'
+    SET MESSAGE_TEXT = 'El paciente ya tiene una internación activa.';
+  END IF;
+END;
+
+
+--- Validar la edad del paciente al ingresar un nuevo registro
+CREATE TRIGGER verificar_edad_paciente
+BEFORE INSERT ON paciente
+FOR EACH ROW
+BEGIN
+  DECLARE edad INT;
+  SET edad = TIMESTAMPDIFF(YEAR, NEW.fecha_nacimiento, CURDATE());
+  IF edad < 18 THEN
+    SIGNAL SQLSTATE '45000'
+    SET MESSAGE_TEXT = 'El paciente es menor de edad.';
+  END IF;
+END;
