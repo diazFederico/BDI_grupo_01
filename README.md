@@ -90,10 +90,10 @@ El objetivo a mayor escala es abordar el problema de la fragmentación de la inf
 
 Este modelo permite gestionar eficientemente la información clínica de los pacientes, sus internaciones y las medicaciones recetadas, asegurando una visión clara y centralizada de su historial médico.
 
-- [*Capítulo 1:* Introducción](Cap1.md)
-- [*Capítulo 2:* Marco conceptual](Cap2.md)
-- [*Capítulo 3:* Metodología](Cap3.md)
-- [*Capítulo 4:* Desarrollo](Cap4.md)
-- [*Capítulo 5:* Conclusiones](Cap5.md)
-- [*Capítulo 6:* Bibliografía](Cap6.md)
+- [**Capítulo 1:** Introducción 📑](Cap1.md)
+- [**Capítulo 2:** Marco conceptual 📝](Cap2.md)
+- [**Capítulo 3:** Metodología 🧠](Cap3.md)
+- [**Capítulo 4:** Desarrollo 📜](Cap4.md)
+- [**Capítulo 5:** Conclusiones 💡](Cap5.md)
+- [**Capítulo 6:** Bibliografía 📚](Cap6.md)
 

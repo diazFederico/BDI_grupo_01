@@ -1,4 +1,6 @@
-# 1. Introducción
+# 1. Introducción 📑
+
+El presente trabajo se centra
 
 <table>
   <tr>

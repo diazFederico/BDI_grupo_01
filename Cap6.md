@@ -1,7 +1,7 @@
-# 6. Bibliografía
+# 6. Bibliografía 📚
 La bibliografía usada para el desarrollo de este trabajo se lista de manera no exhaustiva aquí abajo:
 
-- 
+- Microsoft. (2024). *CREATE TRIGGER (Transact-SQL)*. Microsoft. [https://learn.microsoft.com/es-es/sql/t-sql/statements/create-trigger-transact-sql?view=sql-server-ver16](https://learn.microsoft.com/es-es/sql/t-sql/statements/create-trigger-transact-sql?view=sql-server-ver16)
 
 
 <table>
