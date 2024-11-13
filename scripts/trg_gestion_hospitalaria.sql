@@ -14,7 +14,7 @@ CREATE TABLE paciente_audit_log
 );
 
 
-CREATE TRIGGER audit_paciente_changes
+CREATE TRIGGER trg_audit_paciente
 ON paciente
 FOR INSERT, UPDATE, DELETE
 AS
@@ -49,3 +49,4 @@ BEGIN
     INSERT INTO paciente_audit_log (id_paciente, nombre, apellido, fecha_nacimiento, accion, fecha_accion)
     VALUES (@id_paciente, @nombre, @apellido, @fecha_nacimiento, @action, GETDATE());
 END;
+

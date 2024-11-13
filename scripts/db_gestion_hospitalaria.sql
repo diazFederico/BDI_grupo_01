@@ -168,7 +168,7 @@ CREATE TABLE medicacion_anterior
 CREATE TABLE medicacion_actual
 (
   dosis VARCHAR(35) NOT NULL,
-  fecuencia VARCHAR(35) NOT NULL,
+  frecuencia VARCHAR(35) NOT NULL,
   id_tratamiento INT NOT NULL,
   id_medicamento INT NOT NULL,
   CONSTRAINT PK_id_tratamiento_id_medicamento_M_ACTUAL PRIMARY KEY (id_tratamiento, id_medicamento),
