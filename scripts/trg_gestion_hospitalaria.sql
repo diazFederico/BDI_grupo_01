@@ -106,3 +106,6 @@ BEGIN
     END
 END;
 
+-- Para probar: 
+-- INSERT INTO internacion (fecha_ingreso, fecha_egreso, id_paciente, id_historia)
+-- VALUES ('2024-11-01', '2024-10-30', 9, 9);
