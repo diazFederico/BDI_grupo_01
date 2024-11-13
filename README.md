@@ -10,7 +10,7 @@ Asimismo realizar las consecuentes automatizaciones sobre la misma mediante el u
 
 <img src="./assets/diagrama3.png" style="border-radius: 10px;" alt="Diagrama de la base de datos">
 
-<div style="text-align: center;">
+<div style="text-align: center; width: 100%">
   Diagrama 1: Diagrama ERD del presente trabajo
 </div>
 
