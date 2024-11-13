@@ -12,6 +12,70 @@ El script usado para crear las distintas tablas de este modelo se encuetra <a hr
 
 El script de carga del lote de datos de prueba se encuentra <a href="./scripts/data_gestion_hospitalaria.sql">aqui</a>
 
+## Estructura de un trigger
+Recordemos la estructura básica para definir un trigger en nuestra tabla, considerando en este caso que tengamos una tabla de nombre tabla1
+
+```
+CREATE
+    [DEFINER = { user | CURRENT_USER }]  -- Opcional: Define el usuario que puede crear el trigger (por defecto, el usuario actual)
+    TRIGGER trigger_name                 -- Nombre del trigger
+    trigger_time trigger_event           -- Especifica el momento (BEFORE o AFTER) y el evento (INSERT, UPDATE, DELETE)
+    ON tabla1                            -- La tabla sobre la que se aplica el trigger
+    FOR EACH ROW                         -- Define que el trigger se ejecuta por cada fila afectada
+    [trigger_order]                      -- Opcional: Orden de ejecución si hay múltiples triggers, FOLLOWS o PRECEDES
+    cuerpo_del_trigger;                 -- Las instrucciones que se ejecutan dentro del trigger
+
+```
+
+### Explicación de los componentes:
+- DEFINER (Opcional):
+
+Define qué usuario es el propietario del trigger, o usa CURRENT_USER para hacer referencia al usuario actual.
+
+```
+DEFINER = 'user_name'@'host'
+```
+
+- TRIGGER:
+
+Es la palabra clave que se usa para declarar que se está creando un trigger.
+
+- trigger_name:
+
+El nombre único que identifica al trigger.
+
+- trigger_time:
+
+Especifica el momento en el que el trigger se debe ejecutar:
+
+BEFORE: El trigger se ejecuta antes de que se realice la operación (INSERT, UPDATE, DELETE).
+
+AFTER: El trigger se ejecuta después de que se haya realizado la operación.
+
+- trigger_event:
+
+El evento que desencadena el trigger. Como mencionamos anteriormente puede ser:
+INSERT: Se activa cuando se inserta una fila.
+UPDATE: Se activa cuando se actualiza una fila.
+DELETE: Se activa cuando se elimina una fila.
+
+- ON tabla1:
+
+Especifica la tabla o vista en la que se produce el evento que activa el trigger.
+
+- FOR EACH ROW:
+
+Indica que el trigger se ejecutará para cada fila afectada por el evento. Si el evento afecta varias filas (por ejemplo, en un UPDATE de varias filas), el trigger se ejecutará para cada una de ellas.
+trigger_order (Opcional):
+
+Si hay múltiples triggers definidos para el mismo evento y tabla, este parámetro puede controlar el orden en el que se ejecutan. Puede tomar los valores:
+FOLLOWS: Este trigger se ejecutará después de otro trigger.
+PRECEDES: Este trigger se ejecutará antes de otro trigger.
+
+- cuerpo_del_trigger:
+
+El bloque de código que contiene las instrucciones que se ejecutarán cuando se active el trigger. Este código puede ser una o varias sentencias SQL, como INSERT, UPDATE, DELETE, o incluso código más complejo utilizando variables o condiciones.
+
 # Diccionario de Datos
 
 ## 1. Tabla: paciente
