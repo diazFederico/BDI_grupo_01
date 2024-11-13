@@ -1,6 +1,6 @@
 # 1. Introducción 📑
 
-El presente trabajo se centra
+El presente trabajo se centra en los desencadenadores 
 
 <table>
   <tr>
