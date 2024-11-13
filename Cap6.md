@@ -2,6 +2,9 @@
 La bibliografía usada para el desarrollo de este trabajo se lista de manera no exhaustiva aquí abajo:
 
 - Microsoft. (2024). *CREATE TRIGGER (Transact-SQL)*. Microsoft. [https://learn.microsoft.com/es-es/sql/t-sql/statements/create-trigger-transact-sql?view=sql-server-ver16](https://learn.microsoft.com/es-es/sql/t-sql/statements/create-trigger-transact-sql?view=sql-server-ver16)
+- https://www.datacamp.com/es/tutorial/sql-triggers
+- https://josejuansanchez.org/bd/unidad-12-teoria/index.html#:~:text=Un%20trigger%20es%20un%20objeto,fila%20sobre%20la%20tabla%20asociada
+- 
 
 
 <table>
