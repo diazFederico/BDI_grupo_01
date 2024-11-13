@@ -12,16 +12,16 @@ mirando videos en YouTube, para entender cómo funcionan los triggers, sus usos,
 Luego nos reunimos vía meet para comentar que fue lo que cada uno investigo y de esta manera llegamos a un mutuo
 acuerdo para realizar el trabajo.
 
- **b) Herramientas (Instrumentos y Procedimientos)**
-
  **Instrumentos de Recolección de Información:**
-Fuentes bibliográficas y técnicas: Mayormente el método que utilizamos para recabar información fue internet para entender las 
+
+**Fuentes bibliográficas y técnicas:** Mayormente el método que utilizamos para recabar información fue internet para entender las 
 especificaciones técnicas y la funcionalidad de los triggers.
+
+**b) Herramientas (Instrumentos y Procedimientos)**
 
 **Implementación y Pruebas:**
 
 **Lenguajes y Scripts SQL:** El código SQL fue el lenguaje para la creación y prueba de triggers.
-
 
 Durante el proceso algunas de **las dificultades encontradas** incluyeron en:
 
