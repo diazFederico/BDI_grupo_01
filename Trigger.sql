@@ -46,7 +46,7 @@ AFTER DELETE
 AS
 BEGIN
     INSERT INTO auditoriaPaciente
-    SELECT id_paciente, nombre, fecha_nacimiento, genero, direccion, telefono, email, apellido
+    SELECT id_paciente, nombre, fecha_nacimiento, genero, direccion, telefono, email, apellido,
     FROM deleted;
 END;
 GO
@@ -70,8 +70,7 @@ AFTER INSERT
 AS
 BEGIN
     INSERT INTO auditoriaMedico
-    SELECT id_medico, nombre, apellido, telefono, email, id_especialidad, 
-           GETDATE(), SUSER_NAME(), 'Insert'
+    SELECT id_medico, nombre, apellido, telefono, email, id_especialidad,
     FROM inserted;
 END;
 GO
@@ -83,8 +82,7 @@ AFTER UPDATE
 AS
 BEGIN
     INSERT INTO auditoriaMedico
-    SELECT id_medico, nombre, apellido, telefono, email, id_especialidad, 
-           GETDATE(), SUSER_NAME(), 'Update'
+    SELECT id_medico, nombre, apellido, telefono, email, id_especialidad,
     FROM deleted;
 END;
 GO
@@ -98,7 +96,6 @@ AS
 BEGIN
     INSERT INTO auditoriaMedico
     SELECT id_medico, nombre, apellido, telefono, email, id_especialidad, 
-           GETDATE(), SUSER_NAME(), 'Delete'
     FROM deleted;
 END;
 GO
