@@ -2,19 +2,18 @@
 
 **a) Identificación del Tema y Objetivos:**
 
-Lo que hicimos primeramente fue definir el alcance del trabajo y delimitar el tema principal: tipos de triggers 
+Lo que hicimos primeramente fue definir el alcance del trabajo y delimitar el tema principal **tipos de triggers** 
 en bases de datos. Los objetivos incluyeron identificar, clasificar y analizar los diferentes tipos de triggers existentes.
 
 **Revisión Bibliográfica y Teórica:**
 
-Individualmente hicimos una investigación en internet mediante revisión de artículos, documentación técnica y
-mirando videos en YouTube, para entender cómo funcionan los triggers, sus usos, beneficios y limitaciones. 
+Individualmente hicimos una investigación en internet mediante revisión de artículos, documentación técnica y videos educativos de YouTube, para entender cómo funcionan los triggers, sus usos, beneficios y limitaciones. 
 Luego nos reunimos vía meet para comentar que fue lo que cada uno investigo y de esta manera llegamos a un mutuo
 acuerdo para realizar el trabajo.
 
- **Instrumentos de Recolección de Información:**
+ **Recolección de Información:**
 
-**Fuentes bibliográficas y técnicas:** Mayormente el método que utilizamos para recabar información fue internet para entender las 
+ **Fuentes bibliográficas y técnicas:** mayormente el método que utilizamos para recabar información fue internet para entender las 
 especificaciones técnicas y la funcionalidad de los triggers.
 
 **b) Herramientas (Instrumentos y Procedimientos)**
