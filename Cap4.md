@@ -69,8 +69,10 @@ Indica que el trigger se ejecutará para cada fila afectada por el evento. Si el
 trigger_order (Opcional):
 
 Si hay múltiples triggers definidos para el mismo evento y tabla, este parámetro puede controlar el orden en el que se ejecutan. Puede tomar los valores:
-FOLLOWS: Este trigger se ejecutará después de otro trigger.
-PRECEDES: Este trigger se ejecutará antes de otro trigger.
+| | |
+|---|---|
+FOLLOWS | Este trigger se ejecutará después de otro trigger.
+PRECEDES | Este trigger se ejecutará antes de otro trigger.
 
 - cuerpo_del_trigger:
 
