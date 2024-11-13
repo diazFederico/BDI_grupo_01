@@ -1,3 +1,5 @@
+USE gestion_hospitalaria;
+
 INSERT INTO paciente (id_paciente, nombre, fecha_nacimiento, genero, direccion, telefono, email, apellido, activo)
 VALUES
 (1, 'Juan', '1985-03-15', 'M', 'Calle Ficticia 123', 111234567890, 'juan@email.com', 'Perez', 1),
