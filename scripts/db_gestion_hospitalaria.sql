@@ -78,9 +78,9 @@ CREATE TABLE internacion
 
 CREATE TABLE evolucion_tratamiento
 (
-  fecha DATE NOT NULL,
+  fecha DATETIME DEFAULT GETDATE() NOT NULL,
   id_evolucion INT NOT NULL,
-  descripcion VARCHAR(10000) NOT NULL,
+  descripcion VARCHAR(MAX) NOT NULL,
   id_internacion INT NOT NULL,
   CONSTRAINT PK_id_evolucion PRIMARY KEY (id_evolucion),
   CONSTRAINT FK_evolucion_tratamiento_id_internacion FOREIGN KEY (id_internacion) REFERENCES internacion(id_internacion)
