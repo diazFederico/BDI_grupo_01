@@ -82,7 +82,7 @@ AFTER UPDATE
 AS
 BEGIN
     INSERT INTO auditoriaMedico
-    SELECT id_medico, nombre, apellido, telefono, email, id_especialidad,
+    SELECT *
     FROM deleted;
 END;
 GO
@@ -113,9 +113,6 @@ CREATE TABLE auditoriaTratamiento (
     id_paciente        INT,
     id_medicacion      INT,
     id_medico          INT,
-    fechayhora         DATETIME,
-    usuario            VARCHAR(50),
-    tipoOperacion      VARCHAR(50)
 );
 GO
 
@@ -127,8 +124,7 @@ AFTER INSERT
 AS
 BEGIN
     INSERT INTO auditoriaTratamiento
-    SELECT id_tratamiento, fecha_inicio, fecha_fin, dosis_recetada, frecuencia, observaciones,
-           id_paciente, id_medicacion, id_medico, GETDATE(), SUSER_NAME(), 'Insert'
+    SELECT *
     FROM inserted;
 END;
 GO
@@ -141,7 +137,7 @@ AS
 BEGIN
     INSERT INTO auditoriaTratamiento
     SELECT id_tratamiento, fecha_inicio, fecha_fin, dosis_recetada, frecuencia, observaciones,
-           id_paciente, id_medicacion, id_medico, GETDATE(), SUSER_NAME(), 'Update'
+           id_paciente, id_medicacion, id_medico,
     FROM deleted;
 END;
 GO
@@ -154,7 +150,7 @@ AS
 BEGIN
     INSERT INTO auditoriaTratamiento
     SELECT id_tratamiento, fecha_inicio, fecha_fin, dosis_recetada, frecuencia, observaciones,
-           id_paciente, id_medicacion, id_medico, GETDATE(), SUSER_NAME(), 'Delete'
+           id_paciente, id_medicacion, id_medico,
     FROM deleted;
 END;
 GO
