@@ -28,7 +28,8 @@ La bibliografía usada para el desarrollo de este trabajo se lista de manera no 
 
 10. [Ejemplos de como funciona los triggers](https://www.dongee.com/tutoriales/como-funciona-un-trigger-en-sql-un-tutorial-paso-a-paso/)
 
-11. 
+11. [Guia de Disparadores](https://www.udb.edu.sv/udb_files/recursos_guias/informatica-ingenieria/base-de-datos-ii/2019/ii/guia-7.pdf)
+
 <table>
   <tr>
     <td><a href="Cap5.md"><button style="border-radius: 7px; padding: 10px 20px;">Anterior</button></a></td>
