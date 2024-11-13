@@ -104,16 +104,16 @@ VALUES
 
 INSERT INTO evolucion_tratamiento (fecha, id_evolucion, descripcion, id_internacion)
 VALUES
-('2024-01-18', 1, 'Mejoría en la presión arterial', 1),
-('2024-02-08', 2, 'Control de la glucosa en sangre', 2),
-('2024-03-14', 3, 'Mejoría en la piel', 3),
-('2024-04-04', 4, 'Intervención quirúrgica exitosa', 4),
-('2024-05-17', 5, 'Continuación del tratamiento neurológico', 5),
-('2024-06-04', 6, 'Tratamiento antibiótico para la infección', 6),
-('2024-07-12', 7, 'Intervención exitosa para el cáncer', 7),
-('2024-08-22', 8, 'Fractura en recuperación', 8),
-('2024-09-07', 9, 'Tratamiento psicológico en curso', 9),
-('2024-10-18', 10, 'Ajuste en la dosis de levotiroxina', 10);
+(CAST('2024-01-18' as DATE), 1, 'Mejoría en la presión arterial', 1),
+(CAST('2024-02-08' as DATE), 2, 'Control de la glucosa en sangre', 2),
+(CAST('2024-03-14' as DATE), 3, 'Mejoría en la piel', 3),
+(CAST('2024-04-04' as DATE), 4, 'Intervención quirúrgica exitosa', 4),
+(CAST('2024-05-17' as DATE), 5, 'Continuación del tratamiento neurológico', 5),
+(CAST('2024-06-04' as DATE), 6, 'Tratamiento antibiótico para la infección', 6),
+(CAST('2024-07-12' as DATE), 7, 'Intervención exitosa para el cáncer', 7),
+(CAST('2024-08-22' as DATE), 8, 'Fractura en recuperación', 8),
+(CAST('2024-09-07' as DATE), 9, 'Tratamiento psicológico en curso', 9),
+(CAST('2024-10-18' as DATE), 10, 'Ajuste en la dosis de levotiroxina', 10);
 
 INSERT INTO medicacion_actual (dosis, fecuencia, id_tratamiento, id_medicamento)
 VALUES
