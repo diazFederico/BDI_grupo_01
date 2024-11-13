@@ -38,8 +38,8 @@ CREATE TABLE especialidad
 
 CREATE TABLE diagnosticos
 (
-  id_diagnostico INT NOT NULL,
-  descripcion VARCHAR(100) NOT NULL,
+  id_diagnostico INT IDENTITY(1,1) NOT NULL,
+  descripcion VARCHAR(MAX) NOT NULL,
   CONSTRAINT PK_id_diagnostico PRIMARY KEY (id_diagnostico)
 );
 
