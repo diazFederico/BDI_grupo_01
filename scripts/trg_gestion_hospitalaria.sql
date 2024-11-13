@@ -1,72 +1,51 @@
+-- Triggers para auditoria de pacientes agregados, actualizados o eliminados
+-- select * from paciente_audit_log;
 
---- Permite marcar automáticamente el final de un tratamiento
-CREATE TRIGGER actualizar_historia_clinica_tratamiento_finalizado
-AFTER UPDATE ON tratamiento
-FOR EACH ROW
+-- Esta tabla es necesaria para ir guardando el log de los pacientes ABM
+CREATE TABLE paciente_audit_log
+(
+    id_log INT IDENTITY(1,1) PRIMARY KEY,
+    id_paciente NUMERIC(15),
+    nombre VARCHAR(30),
+    apellido CHAR(30),
+    fecha_nacimiento DATE,
+    accion VARCHAR(10),  -- 'INSERT', 'UPDATE', 'DELETE'
+    fecha_accion DATETIME
+);
+
+
+CREATE TRIGGER audit_paciente_changes
+ON paciente
+FOR INSERT, UPDATE, DELETE
+AS
 BEGIN
-  IF NEW.fecha_fin IS NOT NULL THEN
-    INSERT INTO historia_clinica (fecha_registro, diagnostico, observaciones, id_paciente, id_medico)
-    VALUES (CURDATE(), 'Tratamiento finalizado', 'Tratamiento completado', NEW.id_paciente, NEW.id_medico);
-  END IF;
+    DECLARE @action VARCHAR(10)
+    DECLARE @id_paciente NUMERIC(15)
+    DECLARE @nombre VARCHAR(30)
+    DECLARE @fecha_nacimiento DATE
+    DECLARE @genero CHAR
+    DECLARE @direccion VARCHAR(80)
+    DECLARE @telefono NUMERIC(16)
+    DECLARE @email VARCHAR(100)
+    DECLARE @apellido CHAR(30)
+    DECLARE @activo BIT
+
+    IF EXISTS (SELECT * FROM inserted)
+    BEGIN
+        SET @action = 'INSERT'
+        SELECT @id_paciente = id_paciente, @nombre = nombre, @fecha_nacimiento = fecha_nacimiento, @genero = genero, 
+               @direccion = direccion, @telefono = telefono, @email = email, @apellido = apellido, @activo = activo
+        FROM inserted
+    END
+    ELSE IF EXISTS (SELECT * FROM deleted)
+    BEGIN
+        SET @action = 'DELETE'
+        SELECT @id_paciente = id_paciente, @nombre = nombre, @fecha_nacimiento = fecha_nacimiento, @genero = genero, 
+               @direccion = direccion, @telefono = telefono, @email = email, @apellido = apellido, @activo = activo
+        FROM deleted
+    END
+
+    -- Insertar un registro de auditoría en una tabla de log (que deberías crear)
+    INSERT INTO paciente_audit_log (id_paciente, nombre, apellido, fecha_nacimiento, accion, fecha_accion)
+    VALUES (@id_paciente, @nombre, @apellido, @fecha_nacimiento, @action, GETDATE());
 END;
-
-
---- Verifica que la fecha de finalización de tratamiento no sea anterior a la de inicio
-CREATE TRIGGER validar_fecha_tratamiento
-BEFORE INSERT ON tratamiento
-FOR EACH ROW
-BEGIN
-  IF NEW.fecha_fin IS NOT NULL AND NEW.fecha_fin < NEW.fecha_inicio THEN
-    SIGNAL SQLSTATE '45000'
-    SET MESSAGE_TEXT = 'La fecha de fin no puede ser anterior a la fecha de inicio del tratamiento.';
-  END IF;
-END;
-
-
---- Evita medicación duplicada para un mismo paciente
-CREATE TRIGGER evitar_medicacion_duplicada
-BEFORE INSERT ON tratamiento
-FOR EACH ROW
-BEGIN
-  DECLARE medicacion_duplicada INT;
-  SELECT COUNT(*) INTO medicacion_duplicada
-  FROM tratamiento
-  WHERE id_paciente = NEW.id_paciente AND id_medicacion = NEW.id_medicacion AND fecha_fin IS NULL;
-  
-  IF medicacion_duplicada > 0 THEN
-    SIGNAL SQLSTATE '45000'
-    SET MESSAGE_TEXT = 'El paciente ya está recibiendo este medicamento.';
-  END IF;
-END;
-
-
---- Evita que un paciente tenga más de una internación activa a la vez
-CREATE TRIGGER evitar_internacion_duplicada
-BEFORE INSERT ON internacion
-FOR EACH ROW
-BEGIN
-  DECLARE internaciones_activas INT;
-  SELECT COUNT(*) INTO internaciones_activas
-  FROM internacion
-  WHERE id_paciente = NEW.id_paciente AND fecha_egreso IS NULL;
-  
-  IF internaciones_activas > 0 THEN
-    SIGNAL SQLSTATE '45000'
-    SET MESSAGE_TEXT = 'El paciente ya tiene una internación activa.';
-  END IF;
-END;
-
-
---- Valida la edad del paciente al ingresar un nuevo registro
-CREATE TRIGGER verificar_edad_paciente
-BEFORE INSERT ON paciente
-FOR EACH ROW
-BEGIN
-  DECLARE edad INT;
-  SET edad = TIMESTAMPDIFF(YEAR, NEW.fecha_nacimiento, CURDATE());
-  IF edad < 18 THEN
-    SIGNAL SQLSTATE '45000'
-    SET MESSAGE_TEXT = 'El paciente es menor de edad.';
-  END IF;
-END;
-
