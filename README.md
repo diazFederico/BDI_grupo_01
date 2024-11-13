@@ -8,7 +8,7 @@ El objetivo a mayor escala es abordar el problema de la fragmentación de la inf
 
 Asimismo realizar las consecuentes automatizaciones sobre la misma mediante el uso de los desencadenadores.
 
-![imagen de la bd](./assets/diagrama2.png)
+<img src="./assets/diagrama3.png" style="border-radius: 10px;" alt="Diagrama de la base de datos">
 
 <div style="text-align: center;">
   Diagrama 1: Diagrama ERD del presente trabajo
