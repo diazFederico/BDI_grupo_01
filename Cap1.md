@@ -4,10 +4,9 @@ El presente trabajo de investigación se centra en los desencadenadores (o en in
 
 En el ámbito de la gestión de bases de datos SQL, los desencadenadores o triggers son mecanismos fundamentales de los cuales nos valemos para automatizar ciertas acciones en respuesta a eventos específicos que ocurren en las tablas de la base de datos.
 
-Un trigger es un **objeto** asociado a una tabla que se activa automáticamente cuando se realiza una operación particular, estas "operaciones" son **eventos** que ocurren en la tabla:
-- *INSERT*: El trigger se activa cuando se inserta una nueva fila sobre la tabla asociada.
-- *UPDATE*: El trigger se activa cuando se actualiza una fila sobre la tabla asociada.
-- *DELETE*: El trigger se activa cuando se elimina una fila sobre la tabla asociada.
+Un trigger es un **objeto** asociado a una tabla en nuestra base de datos que se activa automáticamente cuando se realiza una operación particular.
+
+
 
 Los desencadenadores permiten ejecutar procedimientos de manera transparente y sin intervención manual, lo que nos sirve para garantizar la integridad de los datos, validar valores o realizar auditorías.
 

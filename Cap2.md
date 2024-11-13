@@ -1,19 +1,28 @@
 # 2. Marco conceptual 📝
 
-Un marco conceptual sobre triggers en SQL implica establecer una comprensión teórica y operativa sobre qué son los triggers (o desencadenadores), cómo funcionan y cuál es su propósito dentro de una base de datos relacional. En este contexto, el marco conceptual de los triggers en SQL se basa en varios conceptos clave que se interrelacionan para automatizar y controlar el flujo de operaciones sobre los datos.
-
 ## Conceptos clave en un marco conceptual sobre triggers en SQL:
 1. **Trigger (Desencadenador)**:
 
-- Un trigger es un objeto asociado a una tabla en una base de datos que se activa automáticamente en respuesta a un evento específico, como la inserción, actualización o eliminación de registros. Su propósito principal es permitir la automatización de tareas y la validación de datos sin la necesidad de intervención directa del usuario o aplicación.
+Es un objeto asociado a una tabla en una base de datos que se activa automáticamente en respuesta a un evento específico, como la inserción, actualización o eliminación de registros.
 
-- Los triggers pueden ejecutarse antes (BEFORE) o después (AFTER) de que se lleve a cabo la operación en la tabla, dependiendo de cuándo se desea que se ejecuten las acciones automatizadas.
+Su propósito principal es permitir la automatización de tareas y la validación de datos sin la necesidad de intervención directa del usuario o su codificación en la aplicación.
 
-2. **Eventos que activan los triggers**:
-- INSERT: Un trigger puede activarse cuando se inserta una nueva fila en la tabla.
-- UPDATE: Un trigger puede ejecutarse cuando se actualiza una fila existente en la tabla.
-- DELETE: Un trigger se activa cuando se elimina una fila de la tabla.
-Estos eventos permiten que las bases de datos reacciones a las modificaciones de manera dinámica, como la validación de datos, auditoría o actualización de registros relacionados.
+2. **Tiempo de ejecución de un trigger**
+
+Los triggers pueden ejecutarse antes **BEFORE** o después **AFTER** de que se lleve a cabo la operación en la tabla, dependiendo de cuándo se desea que se ejecuten las acciones automatizadas.
+
+2. **Eventos que los activan**:
+
+Llamamos a estas "operaciones" **eventos** ya que ocurren en la tabla y estos pueden ser:
+
+|Sentencia SQL|Momento de activación|
+|---|---|
+|INSERT|Cuando se inserta una nueva fila en la tabla.|
+|UPDATE|Cuando se actualiza una fila existente en la tabla.|
+|DELETE|Cuando se elimina una fila de la tabla.|
+
+
+Estos eventos permiten que las bases de datos reaccionen a las modificaciones de manera dinámica. Un uso práctico de lo antes mencionado es por ejemplo: la validación de datos, auditoría o actualización de registros relacionados de forma segura y manteniendo la consistencia.
 
 3. **Operación de un trigger**:
 
