@@ -9,7 +9,7 @@ UPDATE: El trigger se activa cuando se actualiza una fila sobre la tabla asociad
 DELETE: El trigger se activa cuando se elimina una fila sobre la tabla asociada.
 
 Una vez mencionado esto, pasaremos hablar primeramente de como realizamos el trigger para ello dentro del moto SQL Server tomamos la base de datos llamada "gestion_hospitalaria"
-
+<img src="./assets/diagrama3.png" style="border-radius: 10px;" alt="Diagrama de la base de datos">
 <table>
   <tr>
     <td><a href="Cap3.md"><button style="border-radius: 7px; padding: 10px 20px;">Anterior</button></a></td>
