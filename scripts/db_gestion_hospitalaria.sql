@@ -1,3 +1,15 @@
+/* En caso de que la base de datos este creada se debe ejecutar esta consulta
+USE master; -- Cambia al contexto de la base de datos 'master'
+
+-- Desconecta todos los usuarios y pone la base de datos en modo de usuario único
+ALTER DATABASE gestion_hospitalaria
+SET SINGLE_USER
+WITH ROLLBACK IMMEDIATE;
+
+-- Elimina la base de datos
+DROP DATABASE gestion_hospitalaria;
+*/
+
 CREATE DATABASE gestion_hospitalaria;
 GO
 USE gestion_hospitalaria;
