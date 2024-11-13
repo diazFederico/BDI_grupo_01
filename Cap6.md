@@ -22,6 +22,13 @@ La bibliografía usada para el desarrollo de este trabajo se lista de manera no 
 7. [Tutoriales Programación YA. Descripción de triggers en SQL Server](https://www.tutorialesprogramacionya.com/sqlserverya/temarios/descripcion.php?cod=148&punto=&inicio=)  
    Recuperado el 9 de noviembre de 2024.
 
+8. [Alura Cursos](https://www.aluracursos.com/blog/que-es-y-como-trigger-en-sql#:~:text=Un%20trigger%20es%20un%20procedimiento,insert%2C%20delete%20y%20update)
+
+9. [Medium Creacion y ejemplo de trigger](https://medium.com/@diegonzalez116/creaci%C3%B3n-y-ejemplo-de-trigger-29c503524c47)
+
+10. [Ejemplos de como funciona los triggers](https://www.dongee.com/tutoriales/como-funciona-un-trigger-en-sql-un-tutorial-paso-a-paso/)
+
+11. [Guia de Disparadores](https://www.udb.edu.sv/udb_files/recursos_guias/informatica-ingenieria/base-de-datos-ii/2019/ii/guia-7.pdf)
 
 <table>
   <tr>
