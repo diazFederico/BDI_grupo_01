@@ -117,7 +117,7 @@ VALUES
 (CAST('2024-09-07' as DATE), 9, 'Tratamiento psicológico en curso', 9),
 (CAST('2024-10-18' as DATE), 10, 'Ajuste en la dosis de levotiroxina', 10);
 
-INSERT INTO medicacion_actual (dosis, fecuencia, id_tratamiento, id_medicamento)
+INSERT INTO medicacion_actual (dosis, frecuencia, id_tratamiento, id_medicamento)
 VALUES
 ('10 mg', 'Diario', 1, 6), -- Enalapril
 ('500 mg', 'Diario', 2, 5), -- Metformina
