@@ -2,11 +2,19 @@
 
 # Descripción del Trabajo Práctico
 Este trabajo práctico se centra en el desarrollo de un modelo de diagrama relacional (y su posterior base de datos) con el objetivo de optimizar la gestión de información médica relacionada con pacientes internados.
-Se investigará la estructura y las relaciones entre las entidades clave que componen el sistema: Pacientes, Historias Clínicas, Internaciones, Médicos, Medicaciones y Tratamientos para un buen planteamiento de la base. Y su relacion con el tema asignado: *triggers*
+Se investigará la estructura y las relaciones entre las entidades clave que componen el sistema: Pacientes, Historias Clínicas, Internaciones, Médicos, Medicaciones y Tratamientos para un buen planteamiento de la base. Y su relacion con el tema de estudio asignado: **triggers**
 
 El objetivo a mayor escala es abordar el problema de la fragmentación de la información en el ámbito de la salud, que puede dificultar el seguimiento de la atención médica.
 
+Asimismo realizar las consecuentes automatizaciones sobre la misma mediante el uso de los desencadenadores.
+
 ![imagen de la bd](./assets/diagrama2.png)
+
+<div style="text-align: center;">
+  Diagrama 1: Diagrama ERD del presente trabajo
+</div>
+
+<hr>
 
 ## Entidades principales:
 
