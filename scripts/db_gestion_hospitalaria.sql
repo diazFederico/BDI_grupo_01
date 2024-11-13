@@ -15,6 +15,51 @@ GO
 USE gestion_hospitalaria;
 GO
 
+-- Aca eliminamos las tablas en caso de estar creadas
+IF OBJECT_ID('paciente', 'U') IS NOT NULL 
+    DROP TABLE paciente;
+GO
+
+IF OBJECT_ID('especialidad', 'U') IS NOT NULL 
+    DROP TABLE especialidad;
+GO
+
+IF OBJECT_ID('diagnosticos', 'U') IS NOT NULL 
+    DROP TABLE diagnosticos;
+GO
+
+IF OBJECT_ID('vademecum', 'U') IS NOT NULL 
+    DROP TABLE vademecum;
+GO
+
+IF OBJECT_ID('medico', 'U') IS NOT NULL 
+    DROP TABLE medico;
+GO
+
+IF OBJECT_ID('historia_clinica', 'U') IS NOT NULL 
+    DROP TABLE historia_clinica;
+GO
+
+IF OBJECT_ID('internacion', 'U') IS NOT NULL 
+    DROP TABLE internacion;
+GO
+
+IF OBJECT_ID('evolucion_tratamiento', 'U') IS NOT NULL 
+    DROP TABLE evolucion_tratamiento;
+GO
+
+IF OBJECT_ID('tratamiento', 'U') IS NOT NULL 
+    DROP TABLE tratamiento;
+GO
+
+IF OBJECT_ID('medicacion_anterior', 'U') IS NOT NULL 
+    DROP TABLE medicacion_anterior;
+GO
+
+IF OBJECT_ID('medicacion_actual', 'U') IS NOT NULL 
+    DROP TABLE medicacion_actual;
+GO
+
 CREATE TABLE paciente
 (
   id_paciente NUMERIC(15) NOT NULL,
@@ -45,7 +90,7 @@ CREATE TABLE diagnosticos
 
 CREATE TABLE vademecum
 (
-  id_medicamento INT NOT NULL,
+  id_medicamento INT IDENTITY(1,1) NOT NULL,
   nombre_comercial VARCHAR(MAX) NOT NULL,
   principio_activo VARCHAR(MAX) NOT NULL,
   CONSTRAINT PK_id_medicamento PRIMARY KEY (id_medicamento)
