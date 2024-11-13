@@ -1,0 +1,13 @@
+select * FROM medicacion_anterior;
+select * FROM medicacion_actual;
+select * FROM evolucion_tratamiento;
+select * FROM tratamiento;
+select * FROM internacion;
+select * FROM historia_clinica;
+
+-- Eliminar registros de las tablas con claves foráneas
+select * FROM medico;
+select * FROM paciente;
+select * FROM diagnosticos;
+select * FROM especialidad;
+select * FROM vademecum;
