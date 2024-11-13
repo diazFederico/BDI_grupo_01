@@ -103,7 +103,7 @@ CREATE TABLE medicacion_anterior
   frecuencia VARCHAR(35) NOT NULL,
   id_tratamiento INT NOT NULL,
   id_medicamento INT NOT NULL,
-  CONSTRAINT PK_id_tratamiento_id_medicamento_M-ANTERIOR PRIMARY KEY (id_tratamiento, id_medicamento),
+  CONSTRAINT PK_id_tratamiento_id_medicamento_M_ANTERIOR PRIMARY KEY (id_tratamiento, id_medicamento),
   CONSTRAINT FK_medicacion_anterior_id_tratamiento FOREIGN KEY (id_tratamiento) REFERENCES tratamiento(id_tratamiento),
   CONSTRAINT FK_medicacion_anterior_id_medicamento FOREIGN KEY (id_medicamento) REFERENCES vademecum(id_medicamento)
 );
@@ -114,7 +114,7 @@ CREATE TABLE medicacion_actual
   fecuencia VARCHAR(35) NOT NULL,
   id_tratamiento INT NOT NULL,
   id_medicamento INT NOT NULL,
-  CONSTRAINT PK_id_tratamiento_id_medicamento_M-ACTUAL PRIMARY KEY (id_tratamiento, id_medicamento),
+  CONSTRAINT PK_id_tratamiento_id_medicamento_M_ACTUAL PRIMARY KEY (id_tratamiento, id_medicamento),
   CONSTRAINT FK_medicacion_actual_id_tratamiento FOREIGN KEY (id_tratamiento) REFERENCES tratamiento(id_tratamiento),
   CONSTRAINT FK_medicacion_actual_id_medicamento FOREIGN KEY (id_medicamento) REFERENCES vademecum(id_medicamento)
 );
