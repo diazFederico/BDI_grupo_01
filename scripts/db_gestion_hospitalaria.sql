@@ -123,7 +123,7 @@ CREATE TABLE historia_clinica
 
 CREATE TABLE internacion
 (
-  id_internacion INT NOT NULL,
+  id_internacion INT IDENTITY(1,1) NOT NULL,
   fecha_ingreso DATE NOT NULL,
   fecha_egreso DATE,
   id_paciente NUMERIC(15) NOT NULL,
