@@ -31,7 +31,7 @@ CREATE TABLE paciente
 
 CREATE TABLE especialidad
 (
-  id_especialidad INT NOT NULL,
+  id_especialidad INT IDENTITY(1,1) NOT NULL,
   descripcion VARCHAR(50) NOT NULL,
   CONSTRAINT PK_id_especialidad PRIMARY KEY (id_especialidad)
 );
