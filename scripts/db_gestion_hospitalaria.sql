@@ -145,7 +145,7 @@ CREATE TABLE evolucion_tratamiento
 
 CREATE TABLE tratamiento
 (
-  id_tratamiento INT NOT NULL,
+  id_tratamiento INT IDENTITY(1,1) NOT NULL,
   observaciones VARCHAR(100) NOT NULL,
   id_medico INT NOT NULL,
   id_internacion INT NOT NULL,
